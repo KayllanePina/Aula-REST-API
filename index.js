@@ -28,7 +28,7 @@ app.get('/news-api/v1/categorias', (req, res) => {
 
 // Serviço de busca de noticias
 app.get('/news-api/v1/categorias/:categoriaId/noticias', (req, res) => {
-  //Busca noticias de uma categorias 
+  //Busca noticias de uma categoria 
   connection.query('SELECT id, titulo FROM sistema_noticias.noticia WHERE id_categoria = ' + req.params.categoriaId, function (err, rows, fields) {
     if (err) throw err;
 
